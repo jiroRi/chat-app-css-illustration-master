@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 .frame__cp {
   background-color: #f5f3f7;
-  -webkit-box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
-          box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
+  -webkit-box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
+          box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
 }
 
 .frame__cp::before {
@@ -110,8 +110,8 @@
 /* colors */
 .frame__cp {
   background-color: #f5f3f7;
-  -webkit-box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
-          box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
+  -webkit-box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
+          box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
 }
 
 .frame__cp::before {
@@ -415,18 +415,94 @@ body {
   height: 950px;
   border-radius: 0 0 100% 100% / 0 0 50% 50%;
   background: linear-gradient(207.27deg, #E942FF 0%, #8838FF 90.32%);
+  -webkit-animation: backgroundleftmobile 8s ease-in-out infinite;
+          animation: backgroundleftmobile 8s ease-in-out infinite;
 }
 
 @media (min-width: 1024px) {
   .background-left {
     top: -250px;
     left: -104px;
+    -webkit-animation: backgroundleftdesktop 8s ease-in-out infinite;
+            animation: backgroundleftdesktop 8s ease-in-out infinite;
   }
 }
 
 @media (min-width: 1920px) {
   .background-left {
     width: 40%;
+  }
+}
+
+@-webkit-keyframes backgroundleftdesktop {
+  0% {
+    top: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: -200px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    top: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes backgroundleftdesktop {
+  0% {
+    top: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: -200px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    top: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes backgroundleftmobile {
+  0% {
+    top: -440px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: -400px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    top: -440px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes backgroundleftmobile {
+  0% {
+    top: -440px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: -400px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    top: -440px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -439,18 +515,94 @@ body {
   height: 900px;
   border-radius: 100% 100% 0 0 / 60% 60% 0 0;
   background-color: #f9f4fa;
+  -webkit-animation: backgroundrightmobile 8s ease-in-out infinite;
+          animation: backgroundrightmobile 8s ease-in-out infinite;
 }
 
 @media (min-width: 1024px) {
   .background-right {
     bottom: -250px;
     right: -11.5%;
+    -webkit-animation: backgroundrightdesktop 8s ease-in-out infinite;
+            animation: backgroundrightdesktop 8s ease-in-out infinite;
   }
 }
 
 @media (min-width: 1920px) {
   .background-right {
     width: 40%;
+  }
+}
+
+@-webkit-keyframes backgroundrightdesktop {
+  0% {
+    bottom: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    bottom: -200px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    bottom: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes backgroundrightdesktop {
+  0% {
+    bottom: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    bottom: -200px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    bottom: -250px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes backgroundrightmobile {
+  0% {
+    bottom: -540px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    bottom: -500px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    bottom: -540px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes backgroundrightmobile {
+  0% {
+    bottom: -540px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    bottom: -500px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    bottom: -540px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
