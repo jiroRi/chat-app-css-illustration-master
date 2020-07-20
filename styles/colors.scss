@@ -1,24 +1,111 @@
 /* colors */
 
-$primary-text: (
-    pale-violet: hsl(276, 100%, 81%),
-    moderate-violet: hsl(276, 55%, 52%),
-    desaturated-dark-violet: hsl(271, 15%, 43%),
-    grayish-blue: hsl(206, 6%, 79%),
-    very-dark-desaturated-violet: hsl(271, 36%, 24%),
-    dark-grayish-violet: hsl(270, 7%, 64%)
+$primary: (
+    header-sub: hsl(276, 100%, 81%), /* (sub-heading at the top of the app UI) */
+    chat-receiver: hsl(276, 55%, 52%), /* (chat on the left) */
+    chat-sender: hsl(271, 23%, 18%), /* (chat on the right) */
+    placeholder: hsl(206, 6%, 79%), /* (placeholder text) */
+    header-main: hsl(271, 36%, 24%), /* (main heading) */
+    paragraph: hsl(270, 7%, 64%) /* (paragraph) */
 );
 
-$primary-gradients: (
+$gradients: (
     light-magenta: hsl(293, 100%, 63%),
-    light-magenta: hsl(264, 100%, 61%)
+    light-violet: hsl(264, 100%, 61%)
 );
 
 $secondary: (
     white: hsl(0, 0%, 100%),
-    light-grayish-violet: hsl(270, 20%, 96%),
-    very-dark-desaturated-violet: hsl(271, 36%, 24%),
-    very-light-magenta: hsl(289, 100%, 72%)
+    app-bg: hsl(270, 20%, 96%), /* (app background) */
+    submit-btn: hsl(271, 36%, 24%), /* (submit button background) */
+    radio-btn: hsl(289, 100%, 72%) /* (radio button outline) */
 );
 
-/* font sizes */
+.frame__cp {
+    background-color: map-get($secondary, app-bg);
+    box-shadow: 8px 12px 24px hsla(271, 36%, 24%, 0.15);
+
+    &::before {
+        background-color: map-get($secondary, white);
+    }
+}
+
+.cp-header {
+    background: linear-gradient(to right, map-get($gradients, light-violet), map-get($gradients, light-magenta));
+    box-shadow: 0px 4px 8px hsla(271, 36%, 24%, 0.15);
+}
+
+.cp-header__profile-picture {
+    box-shadow: 0px 2px 4px hsla(271, 36%, 24%, 0.15);
+}
+
+.cp-header__title {
+    b {
+        color: map-get($secondary, white);
+    }
+    p {
+        color: map-get($primary, header-sub);
+    }
+}
+
+.chat-bubble__receiver-text {
+    color: map-get($primary, chat-receiver);
+    background-color: hsl(272, 41%, 93%);
+    box-shadow: 0px 4px 8px hsla(272, 41%, 93%, 0.15);
+}
+
+.chat-bubble__sender-text {
+    color: map-get($primary, chat-sender);
+    background-color: map-get($secondary, white);
+    box-shadow: 0px 2px 4px hsla(271, 36%, 24%, 0.05);
+}
+
+.chat-bubble__receiver-offers {
+    color: map-get($secondary, white);
+    background: linear-gradient(to right, map-get($gradients, light-magenta), map-get($gradients, light-violet));
+
+    input[type='radio']:after {
+        background-color: map-get($gradients, light-magenta);
+        border: 1px solid map-get($secondary, radio-btn);
+
+        transition: background-color 200ms;
+    }
+
+    input[type='radio']:checked:after {
+        background-color: hsl(0, 0%, 97.5%);
+        border: 1px solid map-get($secondary, radio-btn);
+    }
+}
+
+.message-box {
+    background-color: map-get($secondary, white);
+    background-color: map-get($secondary, white);
+    box-shadow: 0px 2px 4px hsla(271, 36%, 24%, 0.05);
+
+    textarea::placeholder {
+        color: map-get($primary, placeholder);
+    }
+}
+
+.message-box__send-btn {
+    background-color: map-get($secondary, submit-btn);
+    transition: background-color 200ms;
+
+    &:hover {
+        background-color: map-get($primary, chat-receiver);
+    }
+
+    &:active {
+        background-color: map-get($secondary, submit-btn);
+    }
+}
+
+.description {
+    b {
+        color: map-get($primary, header-main);
+    }
+
+    p {
+        color: map-get($primary, paragraph);
+    }
+}

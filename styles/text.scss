@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+@import './colors.scss';
+
+$font-sizes: (
+    mobile-body: 16px,
+    app-sub: 8px,
+    app-header: 12px,
+    description-title: 40px,
+    description-body: 16px
+);
+
+.cp-header__title {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 100%;
+
+    b {
+        font-size: map-get($font-sizes, app-header);
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        line-height: 12px;
+    }
+    
+    p {
+        margin: 4px 0 0 0;
+        font-size: map-get($font-sizes, app-sub);
+        letter-spacing: 0;
+        line-height: 8px;
+    }
+
+}
+
+.chat-bubble-text {
+
+    font-size: map-get($font-sizes, app-sub);
+    font-weight: 500;
+    
+    letter-spacing: -0.1px;
+    line-height: 11px;
+
+}
+
+.chat-bubble__receiver-offers {
+    display: flex;
+    align-items: center;
+
+    label {
+        font-size: map-get($font-sizes, app-sub);
+        font-weight: 400;
+        
+        line-height: 8px;
+    }
+
+    b {
+        font-size: map-get($font-sizes, app-header);
+        font-weight: 700;
+
+        line-height: 12px;
+        margin-left: auto;
+    }
+}
+
+.message-box {
+    textarea {
+        display: flex;
+        align-items: center;
+        height: 8px;
+        resize: none;
+        border: none;
+        outline: none;
+        overflow: hidden;
+
+        font-size: map-get($font-sizes, app-sub);
+
+        &::placeholder {
+            font-size: map-get($font-sizes, app-sub);
+        }
+    }
+}
+
+.description {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    max-width: 310px;
+    margin-top: 64px;
+
+    text-align: center;
+
+    @media(min-width: 1024px) {
+
+        max-width: 440px;
+
+        margin-top: 0;
+        margin-left: 120px;
+        text-align: left;
+    }
+
+    b {
+        font-size: map-get($font-sizes, description-title);
+        letter-spacing: -0.5px;
+
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: map-get($font-sizes, description-body);
+        letter-spacing: 0px;
+        line-height: 28px;
+
+        margin: 0;
+    }
+}
