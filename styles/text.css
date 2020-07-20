@@ -2,8 +2,8 @@
 /* colors */
 .frame__cp {
   background-color: #f5f3f7;
-  -webkit-box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
-          box-shadow: 8px 12px 24px rgba(62, 39, 83, 0.15);
+  -webkit-box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
+          box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
 }
 
 .frame__cp::before {
