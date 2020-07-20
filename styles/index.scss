@@ -191,16 +191,16 @@ body {
     transition: opacity 250ms;
 
     &:nth-child(1) {        
-        animation: chatpop 400ms 1.5s forwards;
+        animation: chatpop 400ms 2.5s forwards;
     }
 
     &:nth-child(2) {
-        animation: chatpop 400ms 3s forwards;
+        animation: chatpop 400ms 4s forwards;
     }
 
     &:nth-child(6) {
         margin-top: 8px;
-        animation: chatpop 400ms 8.5s forwards;
+        animation: chatpop 400ms 9.5s forwards;
     }
 }
 
@@ -233,7 +233,7 @@ body {
             left: 0;
     
             opacity: 1;
-            animation: imagepop 100ms 4.5s forwards;
+            animation: imagepop 100ms 5.5s forwards;
         }
     
         &:nth-child(2) {
@@ -242,7 +242,7 @@ body {
             left: 0;
             
             opacity: 1;
-            animation: imagepop 100ms 4.75s forwards;
+            animation: imagepop 100ms 5.75s forwards;
         }
     
         &:nth-child(3) {
@@ -251,7 +251,7 @@ body {
             left: 0;
             
             opacity: 1;
-            animation: imagepop 100ms 5s forwards;
+            animation: imagepop 100ms 6s forwards;
         }
     }
 }
@@ -278,8 +278,9 @@ body {
     align-self: flex-end;
 
     transition: opacity 250ms;
+    text-align: right;
 
-    width: 100%;
+    width: auto;
     max-width: 130px;
 
     padding: 8px;
@@ -289,11 +290,11 @@ body {
     border-radius: 8px 8px 4px 8px;
 
     &:nth-child(4) {
-        animation: chatpop 400ms 5.5s forwards;
+        animation: chatpop 400ms 6.5s forwards;
     }
 
     &:nth-child(5) {
-        animation: chatpop 400ms 7s forwards;
+        animation: chatpop 400ms 8s forwards;
     }
 }
 
@@ -314,11 +315,11 @@ body {
     border-radius: 8px 8px 8px 4px;
 
     &:nth-child(1) {
-        animation: offerpop 400ms 9.5s forwards;
+        animation: offerpop 400ms 10.5s forwards;
     }
 
     &:nth-child(2) {
-        animation: offerpop 400ms 9.75s forwards;
+        animation: offerpop 400ms 10.75s forwards;
     }
 }
 
