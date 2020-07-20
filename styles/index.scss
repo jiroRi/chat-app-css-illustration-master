@@ -178,7 +178,7 @@ body {
 
 .chat-bubble__receiver-text {
 
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     min-width: 128px;
     max-width: 128px;
@@ -188,8 +188,9 @@ body {
     box-sizing: border-box;
 
     border-radius: 8px 8px 8px 4px;
+    transition: opacity 250ms;
 
-    &:nth-child(1) {
+    &:nth-child(1) {        
         animation: chatpop 400ms 500ms forwards;
     }
 
@@ -215,6 +216,8 @@ body {
     width: 136px;
     height: 40px;
 
+    transition: opacity 250ms;
+
     img {
         width: 40px;
         height: 40px;
@@ -222,31 +225,32 @@ body {
 
         border-radius: 8px;
         box-shadow: 0px 2px 4px hsla(271, 36%, 24%, 0.05);
+        transition: left 250ms;
 
         &:nth-child(1) {
             position: relative;
             top: 0;
-            left: 8px;
+            left: 0;
     
-            opacity: 0;
+            opacity: 1;
             animation: imagepop 100ms 3.5s forwards;
         }
     
         &:nth-child(2) {
             position: relative;
             top: 0;
-            left: 8px;
+            left: 0;
             
-            opacity: 0;
+            opacity: 1;
             animation: imagepop 100ms 3.75s forwards;
         }
     
         &:nth-child(3) {
             position: relative;
             top: 0;
-            left: 8px;
+            left: 0;
             
-            opacity: 0;
+            opacity: 1;
             animation: imagepop 100ms 4s forwards;
         }
     }
@@ -270,8 +274,10 @@ body {
 }
 
 .chat-bubble__sender-text {
-    opacity: 0;
+    opacity: 1;
     align-self: flex-end;
+
+    transition: opacity 250ms;
 
     width: 100%;
     max-width: 130px;
@@ -292,9 +298,9 @@ body {
 }
 
 .chat-bubble__receiver-offers {
-    opacity: 0;
+    opacity: 1;
     position: relative;
-    right: 16px;
+    right: 0;
 
     width: 100%;
     min-width: 160px;
@@ -304,6 +310,7 @@ body {
     margin-bottom: 8px;
     box-sizing: border-box;
 
+    transition: opacity 250ms;
     border-radius: 8px 8px 8px 4px;
 
     &:nth-child(1) {
