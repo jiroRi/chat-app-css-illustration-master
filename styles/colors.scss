@@ -23,7 +23,7 @@ $secondary: (
 
 .frame__cp {
     background-color: map-get($secondary, app-bg);
-    box-shadow: 8px 12px 24px hsla(271, 36%, 24%, 0.15);
+    box-shadow: 8px 40px 80px hsla(271, 36%, 24%, 0.15);
 
     &::before {
         background-color: map-get($secondary, white);
