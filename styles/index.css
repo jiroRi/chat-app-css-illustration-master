@@ -559,19 +559,19 @@ body {
 }
 
 .chat-bubble__receiver-text:nth-child(1) {
-  -webkit-animation: chatpop 400ms 2.5s forwards;
-          animation: chatpop 400ms 2.5s forwards;
+  -webkit-animation: chatpop 400ms 1.5s forwards;
+          animation: chatpop 400ms 1.5s forwards;
 }
 
 .chat-bubble__receiver-text:nth-child(2) {
-  -webkit-animation: chatpop 400ms 4s forwards;
-          animation: chatpop 400ms 4s forwards;
+  -webkit-animation: chatpop 400ms 3s forwards;
+          animation: chatpop 400ms 3s forwards;
 }
 
 .chat-bubble__receiver-text:nth-child(6) {
   margin-top: 8px;
-  -webkit-animation: chatpop 400ms 9.5s forwards;
-          animation: chatpop 400ms 9.5s forwards;
+  -webkit-animation: chatpop 400ms 8.5s forwards;
+          animation: chatpop 400ms 8.5s forwards;
 }
 
 .chat-bubble__sender-image {
@@ -611,8 +611,8 @@ body {
   top: 0;
   left: 0;
   opacity: 1;
-  -webkit-animation: imagepop 100ms 5.5s forwards;
-          animation: imagepop 100ms 5.5s forwards;
+  -webkit-animation: imagepop 100ms 4.5s forwards;
+          animation: imagepop 100ms 4.5s forwards;
 }
 
 .chat-bubble__sender-image img:nth-child(2) {
@@ -620,8 +620,8 @@ body {
   top: 0;
   left: 0;
   opacity: 1;
-  -webkit-animation: imagepop 100ms 5.75s forwards;
-          animation: imagepop 100ms 5.75s forwards;
+  -webkit-animation: imagepop 100ms 4.75s forwards;
+          animation: imagepop 100ms 4.75s forwards;
 }
 
 .chat-bubble__sender-image img:nth-child(3) {
@@ -629,8 +629,8 @@ body {
   top: 0;
   left: 0;
   opacity: 1;
-  -webkit-animation: imagepop 100ms 6s forwards;
-          animation: imagepop 100ms 6s forwards;
+  -webkit-animation: imagepop 100ms 5s forwards;
+          animation: imagepop 100ms 5s forwards;
 }
 
 @-webkit-keyframes imagepop {
@@ -679,13 +679,13 @@ body {
 }
 
 .chat-bubble__sender-text:nth-child(4) {
-  -webkit-animation: chatpop 400ms 6.5s forwards;
-          animation: chatpop 400ms 6.5s forwards;
+  -webkit-animation: chatpop 400ms 5.5s forwards;
+          animation: chatpop 400ms 5.5s forwards;
 }
 
 .chat-bubble__sender-text:nth-child(5) {
-  -webkit-animation: chatpop 400ms 8s forwards;
-          animation: chatpop 400ms 8s forwards;
+  -webkit-animation: chatpop 400ms 7s forwards;
+          animation: chatpop 400ms 7s forwards;
 }
 
 .chat-bubble__receiver-offers {
@@ -705,13 +705,13 @@ body {
 }
 
 .chat-bubble__receiver-offers:nth-child(1) {
-  -webkit-animation: offerpop 400ms 10.5s forwards;
-          animation: offerpop 400ms 10.5s forwards;
+  -webkit-animation: offerpop 400ms 9.5s forwards;
+          animation: offerpop 400ms 9.5s forwards;
 }
 
 .chat-bubble__receiver-offers:nth-child(2) {
-  -webkit-animation: offerpop 400ms 10.75s forwards;
-          animation: offerpop 400ms 10.75s forwards;
+  -webkit-animation: offerpop 400ms 9.75s forwards;
+          animation: offerpop 400ms 9.75s forwards;
 }
 
 @-webkit-keyframes offerpop {
