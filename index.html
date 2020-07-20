@@ -109,5 +109,32 @@
       Coded by <a href="https://jiroricaro.netlify.app">Jiro Ricaro</a>.
     </div>
   </div>
+  <script>
+    let bubbleReceiver = document.querySelectorAll('.chat-bubble__receiver-text')
+    let bubbleSenderImage = document.querySelectorAll('.chat-bubble__sender-image > img')
+    let bubbleSender = document.querySelectorAll('.chat-bubble__sender-text')
+    let bubbleOffer = document.querySelectorAll('.chat-bubble__receiver-offers')
+
+    window.onload = setTimeout(() => {
+      for( let i = 0 ; i < bubbleReceiver.length ; i++ ) {
+        bubbleReceiver[i].style.opacity = 0;
+      }
+
+      for( let i = 0 ; i < bubbleSenderImage.length ; i++ ) {
+        bubbleSenderImage[i].style.opacity = 0;
+        bubbleSenderImage[i].style.left = `8px`;
+      }
+
+      for( let i = 0 ; i < bubbleSender.length ; i++ ) {
+        bubbleSender[i].style.opacity = 0;
+      }
+
+      for( let i = 0 ; i < bubbleOffer.length ; i++ ) {
+        bubbleOffer[i].style.opacity = 0;
+        bubbleSenderImage[i].style.right = `16px`;
+      }
+    }, 250)
+
+  </script>
 </body>
 </html>

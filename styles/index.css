@@ -331,6 +331,7 @@
 
 .description b {
   font-size: 40px;
+  font-weight: 500;
   letter-spacing: -0.5px;
   margin-bottom: 24px;
 }
@@ -544,7 +545,7 @@ body {
 }
 
 .chat-bubble__receiver-text {
-  opacity: 0;
+  opacity: 1;
   width: 100%;
   min-width: 128px;
   max-width: 128px;
@@ -553,6 +554,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px 8px 8px 4px;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .chat-bubble__receiver-text:nth-child(1) {
@@ -588,6 +591,8 @@ body {
   margin: 8px 0;
   width: 136px;
   height: 40px;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .chat-bubble__sender-image img {
@@ -597,13 +602,15 @@ body {
   border-radius: 8px;
   -webkit-box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
           box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
+  -webkit-transition: left 250ms;
+  transition: left 250ms;
 }
 
 .chat-bubble__sender-image img:nth-child(1) {
   position: relative;
   top: 0;
-  left: 8px;
-  opacity: 0;
+  left: 0;
+  opacity: 1;
   -webkit-animation: imagepop 100ms 3.5s forwards;
           animation: imagepop 100ms 3.5s forwards;
 }
@@ -611,8 +618,8 @@ body {
 .chat-bubble__sender-image img:nth-child(2) {
   position: relative;
   top: 0;
-  left: 8px;
-  opacity: 0;
+  left: 0;
+  opacity: 1;
   -webkit-animation: imagepop 100ms 3.75s forwards;
           animation: imagepop 100ms 3.75s forwards;
 }
@@ -620,8 +627,8 @@ body {
 .chat-bubble__sender-image img:nth-child(3) {
   position: relative;
   top: 0;
-  left: 8px;
-  opacity: 0;
+  left: 0;
+  opacity: 1;
   -webkit-animation: imagepop 100ms 4s forwards;
           animation: imagepop 100ms 4s forwards;
 }
@@ -657,9 +664,11 @@ body {
 }
 
 .chat-bubble__sender-text {
-  opacity: 0;
+  opacity: 1;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
   width: 100%;
   max-width: 130px;
   padding: 8px;
@@ -680,9 +689,9 @@ body {
 }
 
 .chat-bubble__receiver-offers {
-  opacity: 0;
+  opacity: 1;
   position: relative;
-  right: 16px;
+  right: 0;
   width: 100%;
   min-width: 160px;
   max-width: 160px;
@@ -690,6 +699,8 @@ body {
   margin-bottom: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
   border-radius: 8px 8px 8px 4px;
 }
 
