@@ -282,12 +282,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 8px;
+  height: 9px;
   resize: none;
   border: none;
   outline: none;
   overflow: hidden;
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .message-box textarea::-webkit-input-placeholder {
@@ -544,6 +544,7 @@ body {
 }
 
 .chat-bubble__receiver-text {
+  opacity: 0;
   width: 100%;
   min-width: 128px;
   max-width: 128px;
@@ -554,7 +555,24 @@ body {
   border-radius: 8px 8px 8px 4px;
 }
 
+.chat-bubble__receiver-text:nth-child(1) {
+  -webkit-animation: chatpop 400ms 500ms forwards;
+          animation: chatpop 400ms 500ms forwards;
+}
+
+.chat-bubble__receiver-text:nth-child(2) {
+  -webkit-animation: chatpop 400ms 2s forwards;
+          animation: chatpop 400ms 2s forwards;
+}
+
+.chat-bubble__receiver-text:nth-child(6) {
+  margin-top: 8px;
+  -webkit-animation: chatpop 400ms 7.5s forwards;
+          animation: chatpop 400ms 7.5s forwards;
+}
+
 .chat-bubble__sender-image {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,8 +586,8 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 8px 0;
-  width: 100%;
-  max-width: 140px;
+  width: 136px;
+  height: 40px;
 }
 
 .chat-bubble__sender-image img {
@@ -581,7 +599,65 @@ body {
           box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
 }
 
+.chat-bubble__sender-image img:nth-child(1) {
+  position: relative;
+  top: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-animation: imagepop 100ms 3.5s forwards;
+          animation: imagepop 100ms 3.5s forwards;
+}
+
+.chat-bubble__sender-image img:nth-child(2) {
+  position: relative;
+  top: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-animation: imagepop 100ms 3.75s forwards;
+          animation: imagepop 100ms 3.75s forwards;
+}
+
+.chat-bubble__sender-image img:nth-child(3) {
+  position: relative;
+  top: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-animation: imagepop 100ms 4s forwards;
+          animation: imagepop 100ms 4s forwards;
+}
+
+@-webkit-keyframes imagepop {
+  0% {
+    left: 8px;
+    opacity: 0;
+  }
+  50% {
+    left: 4px;
+    opacity: 0.5;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes imagepop {
+  0% {
+    left: 8px;
+    opacity: 0;
+  }
+  50% {
+    left: 4px;
+    opacity: 0.5;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
 .chat-bubble__sender-text {
+  opacity: 0;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100%;
@@ -593,7 +669,20 @@ body {
   border-radius: 8px 8px 4px 8px;
 }
 
+.chat-bubble__sender-text:nth-child(4) {
+  -webkit-animation: chatpop 400ms 4.5s forwards;
+          animation: chatpop 400ms 4.5s forwards;
+}
+
+.chat-bubble__sender-text:nth-child(5) {
+  -webkit-animation: chatpop 400ms 6s forwards;
+          animation: chatpop 400ms 6s forwards;
+}
+
 .chat-bubble__receiver-offers {
+  opacity: 0;
+  position: relative;
+  right: 16px;
   width: 100%;
   min-width: 160px;
   max-width: 160px;
@@ -602,6 +691,46 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px 8px 8px 4px;
+}
+
+.chat-bubble__receiver-offers:nth-child(1) {
+  -webkit-animation: offerpop 400ms 9s forwards;
+          animation: offerpop 400ms 9s forwards;
+}
+
+.chat-bubble__receiver-offers:nth-child(2) {
+  -webkit-animation: offerpop 400ms 9.2s forwards;
+          animation: offerpop 400ms 9.2s forwards;
+}
+
+@-webkit-keyframes offerpop {
+  0% {
+    opacity: 0;
+    right: 16px;
+  }
+  50% {
+    opacity: 0.5;
+    right: 8px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes offerpop {
+  0% {
+    opacity: 0;
+    right: 16px;
+  }
+  50% {
+    opacity: 0.5;
+    right: 8px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 .message-box {
@@ -625,5 +754,41 @@ body {
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@-webkit-keyframes chatpop {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes chatpop {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=index.css.map */
