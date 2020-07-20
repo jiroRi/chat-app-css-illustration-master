@@ -3,94 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/index.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/text.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/colors.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/buttons.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Chat App CSS Illustration</title>
 </head>
 <body>
-  <div class="background"></div>
+<!--   <div class="background"> -->
+    <div class="background-left"></div>
+    <div class="background-right"></div>
+<!--   </div> -->
+  <div class="chat-app">
 
-  <div class="frame__cp">
+    <div class="frame__cp">
 
-    <div class="cp-header">
+      <div class="cp-header">
 
-      <div class="cp-header__back-button"></div>
+        <svg viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="cp-header__back-btn">
+          <path d="M0.930023 5.41057L0.925572 5.41684L0.921516 5.42337C0.808856 5.6048 0.75 5.80293 0.75 6.01348C0.75 6.22437 0.809241 6.41924 0.930023 6.58943L4.0242 10.9494C4.13793 11.1315 4.31252 11.25 4.53879 11.25C4.76481 11.25 4.94283 11.1322 5.06785 10.956C5.18863 10.7858 5.24787 10.591 5.24787 10.3801C5.24787 10.1692 5.18863 9.97429 5.06785 9.8041L2.37776 6.01348L5.06785 2.22285C5.20062 2.03577 5.26487 1.82563 5.2471 1.60029C5.23159 1.40357 5.17644 1.2213 5.07756 1.05876C4.96399 0.87204 4.78757 0.75 4.55792 0.75C4.3319 0.75 4.15388 0.867822 4.02885 1.04399L0.930023 5.41057Z" fill="white" stroke="white" stroke-width="0.5"/>
+        </svg>
+          
+        <div class="cp-header__profile-picture"></div>
 
-      <div class="cp-header__profile-picture"></div>
-
-      <div class="cp-header__title">
-        <b>Samuel Green</b>
-        <p>Available to Walk</p>
-      </div>
-
-      <div class="cp-header__ellipsis"></div>
-
-    </div>
-
-    <div class="cp-body">
-
-      <div class="chat-bubble__receiver-text">
-        That sounds great. I’d be happy with that.
-      </div>
-
-      <div class="chat-bubble__receiever-text">
-        Could you send over some pictures of your dog, please?
-      </div>
-
-      <div class="chat-bubble__sender-image">
-        
-      </div>
-
-      <div class="chat-bubble__sender-text">
-        Here are a few pictures. She’s a happy girl!
-      </div>
-
-      <div class="chat-bubble__sender-text">
-        Can you make it?
-      </div>
-
-      <div class="chat-bubble__receiver-text">
-        She looks so happy! The time we discussed works. How long shall I take her out for?
-      </div>
-
-      <div class="chat-bubble__receiver-offers">
-        30 minute walk
-        $29
-      </div>
-
-      <div class="chat-bubble__receiver-offers">
-        1 hour walk
-        $49
-      </div>
-
-      <div class="message-box">
-        <input>Type a message…
-        <div class="message-box__send-btn">
+        <div class="cp-header__title">
+          <b>Samuel Green</b>
+          <p>Available to Walk</p>
         </div>
+
+        <div class="cp-header__ellipsis">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
 
+      <div class="cp-body">
+
+        <div class="chat-bubble__receiver-text chat-bubble-text">
+          That sounds great. I’d be happy with that.
+        </div>
+
+        <div class="chat-bubble__receiver-text chat-bubble-text">
+          Could you send over some pictures of your dog, please?
+        </div>
+
+        <div class="chat-bubble__sender-image">
+          <img src="./images/dog-image-1.jpg">
+          <img src="./images/dog-image-2.jpg">
+          <img src="./images/dog-image-3.jpg">
+        </div>
+
+        <div class="chat-bubble__sender-text chat-bubble-text">
+          Here are a few pictures. She’s a happy girl!
+        </div>
+
+        <div class="chat-bubble__sender-text chat-bubble-text">
+          Can you make it?
+        </div>
+
+        <div class="chat-bubble__receiver-text chat-bubble-text">
+          She looks so happy! The time we discussed works. How long shall I take her out for?
+        </div>
+
+        <form id="offer-response">
+          <div class="chat-bubble__receiver-offers">
+            <input type="radio" id="walk-30min" value="30min" name="offers"><label for="walk-30min">30 minute walk</label>
+            <b>$29</b>
+          </div>
+
+          <div class="chat-bubble__receiver-offers">
+            <input type="radio" id="walk-1hr" value="1hr" name="offers"><label for="walk-1hr">1 hour walk</label>
+            <b>$49</b>
+
+          </div>
+        </form>
+
+        <div class="message-box">
+          <textarea name="app-message" form="offer-response" placeholder="Type a message…"></textarea>
+          <div class="message-box__send-btn">
+            <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.06998 5.41057L5.07443 5.41684L5.07848 5.42337C5.19114 5.6048 5.25 5.80293 5.25 6.01348C5.25 6.22437 5.19076 6.41924 5.06998 6.58943L1.9758 10.9494C1.86207 11.1315 1.68748 11.25 1.46121 11.25C1.23519 11.25 1.05717 11.1322 0.932148 10.956C0.811366 10.7858 0.752126 10.591 0.752126 10.3801C0.752126 10.1692 0.811366 9.97429 0.932148 9.8041L3.62224 6.01348L0.932148 2.22285C0.799378 2.03577 0.735131 1.82563 0.752899 1.60029C0.768412 1.40357 0.823564 1.2213 0.922437 1.05876C1.03601 0.87204 1.21243 0.75 1.44208 0.75C1.6681 0.75 1.84612 0.867822 1.97115 1.04399L5.06998 5.41057Z" fill="white" stroke="white" stroke-width="0.5"/>
+              </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>  
+
+    <div class="description">
+      <b>Simple booking</b>
+
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+      discuss arrangements and make bookings. Once the walk has been completed you can rate 
+      your walker and book again all through the chat.
+      </p>
     </div>
-
-  </div>  
-
-  <b>Simple booking</b>
-
-  <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  </p>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://jiroricaro.netlify.app">Jiro Ricaro</a>.
+    </div>
   </div>
-  
 </body>
 </html>

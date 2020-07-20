@@ -1,2 +1,251 @@
 @import './colors.scss';
-@import './font-sizes.scss';
+@import './text.scss';
+
+.attribution { 
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 330px/2);
+    font-size: 12px; 
+    text-align: center; 
+    font-weight: 500;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+}
+
+.chat-app {
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+    padding: 64px 32px;
+    box-sizing: border-box;
+
+    @media(min-width: 1024px) {
+        flex-flow: row;
+
+        padding: 0;
+
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+/* .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+} */
+
+.background-left {
+    position: fixed;
+    top: -440px;
+    left: -322px;
+    z-index: -1;
+
+    width: 510px;
+    height: 950px;
+
+    border-radius: 0 0 100% 100% / 0 0 50% 50%;
+
+    background: linear-gradient(207.27deg, #E942FF 0%, #8838FF 90.32%);
+
+    @media(min-width: 1024px) {
+        top: -250px;
+        left: -104px;
+    }
+
+    @media(min-width: 1920px) {
+        width: 40%;
+    }
+}
+
+.background-right {
+    position: fixed;
+    bottom: -540px;
+    right: -322px;
+    z-index: -1;
+
+    width: 510px;
+    height: 900px;
+
+    border-radius: 100% 100% 0 0 / 60% 60% 0 0;
+
+    background-color: hsl(290, 38%, 97%);
+
+    @media(min-width: 1024px) {
+        bottom: -250px;
+        right: -10.25%;
+    }
+
+    @media(min-width: 1920px) {
+        width: 40%;
+    }
+}
+
+.frame__cp {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    min-width: 250px;
+    max-width: 250px;
+
+    box-sizing: border-box;
+    border-radius: 28px;
+    border: 10px solid white;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: calc(50% - 130px/2);
+        z-index: 10;
+
+        width: 130px;
+        height: 30px;
+
+        border-radius: 12px;
+    }
+
+    @media(min-width: 1024px) {
+        margin-left: 64px;
+    }
+}
+
+.cp-header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    height: 70px;
+    width: 100%;
+
+    border-radius: 20px 20px 5px 5px;
+    padding: 30px 8px 15px 12px;
+    box-sizing: border-box;
+}
+
+.cp-header__profile-picture {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid white;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+
+    background-image: url(../images/avatar.jpg);
+    background-size: 100%;
+}
+
+.cp-header__title {
+    box-sizing: border-box;
+    height: 24px;
+    padding: 2px 0;
+}
+
+.cp-body {
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 10px 8px;
+    box-sizing: border-box;
+}
+
+.chat-bubble__receiver-text {
+
+    width: 100%;
+    min-width: 128px;
+    max-width: 128px;
+
+    padding: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+
+    border-radius: 8px 8px 8px 4px;
+}
+
+.chat-bubble__sender-image {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-self: flex-end;
+    
+    margin: 8px 0;
+    width: 100%;
+    max-width: 140px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px hsla(271, 36%, 24%, 0.05);
+    }
+}
+
+.chat-bubble__sender-text {
+    align-self: flex-end;
+
+    width: 100%;
+    max-width: 130px;
+
+    padding: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+
+    border-radius: 8px 8px 4px 8px;
+}
+
+.chat-bubble__receiver-offers {
+
+    width: 100%;
+    min-width: 160px;
+    max-width: 160px;
+
+    padding: 10px 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+
+    border-radius: 8px 8px 8px 4px;
+}
+
+.message-box {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 32px;
+    width: 100%;
+
+    margin: 8px 0 4px 0;
+    padding: 10px 5px 10px 16px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
