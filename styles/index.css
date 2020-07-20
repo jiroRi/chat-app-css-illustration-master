@@ -669,7 +669,7 @@ body {
       align-self: flex-end;
   -webkit-transition: opacity 250ms;
   transition: opacity 250ms;
-  text-align: right;
+  text-align: left;
   width: auto;
   max-width: 130px;
   padding: 8px;
