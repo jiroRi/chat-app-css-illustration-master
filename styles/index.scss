@@ -177,8 +177,10 @@ body {
 
     display: flex;
     flex-flow: column;
+    overflow: hidden;
 
     width: 100%;
+    height: 536px;
     min-width: 250px;
     max-width: 250px;
 
@@ -237,21 +239,78 @@ body {
 }
 
 .cp-body {
-    position: relative;
+    position: absolute;
+    bottom: -536px;
 
     display: flex;
     flex-flow: column;
 
     height: 100%;
     width: 100%;
+    opacity: 0;
 
     padding: 10px 8px;
     box-sizing: border-box;
+
+    animation: chatMove 10.75s forwards;
+}
+
+@keyframes chatMove {
+    0% {
+        bottom: -448px;
+    }
+
+    // 2.5s
+    23% {
+        bottom: -440px;
+        opacity: 1;
+    }
+
+    // 4s
+    37% {
+        bottom: -396px;
+        opacity: 1;
+    }
+
+    // 5.5s
+    51% {
+        bottom: -340px;
+        opacity: 1;
+    }
+
+    // 6.5s
+    60% {
+        bottom: -292px;
+        opacity: 1;
+    }
+
+    // 8s
+    74% {
+        bottom: -254px;
+        opacity: 1;
+    }
+
+    // 9.5s
+    88% {
+        bottom: -198px;
+        opacity: 1;
+    }
+
+    // 10.5s
+    97% {
+        bottom: -72px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -72px;
+        opacity: 1;
+    }
 }
 
 .chat-bubble__receiver-text {
 
-    opacity: 1;
+    opacity: 0;
     width: 100%;
     min-width: 128px;
     max-width: 128px;
@@ -347,7 +406,7 @@ body {
 }
 
 .chat-bubble__sender-text {
-    opacity: 1;
+    opacity: 0;
     align-self: flex-end;
 
     transition: opacity 250ms;
@@ -372,7 +431,7 @@ body {
 }
 
 .chat-bubble__receiver-offers {
-    opacity: 1;
+    opacity: 0;
     position: relative;
     right: 0;
 
@@ -412,13 +471,18 @@ body {
 }
 
 .message-box {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
 
     height: 32px;
-    width: 100%;
+    width: calc(100% - 20px);
 
     margin: 8px 0 4px 0;
     padding: 10px 5px 10px 16px;

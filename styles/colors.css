@@ -1,108 +1,83 @@
 /* colors */
 .frame__cp {
-  background-color: #f5f3f7;
-  -webkit-box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
-          box-shadow: 8px 40px 80px rgba(62, 39, 83, 0.15);
+  background-color: hsl(270deg, 20%, 96%);
+  box-shadow: 8px 40px 80px hsla(271deg, 36%, 24%, 0.15);
 }
-
 .frame__cp::before {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .cp-header {
-  background: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
-  background: linear-gradient(to right, #8838ff, #e942ff);
-  -webkit-box-shadow: 0px 4px 8px rgba(62, 39, 83, 0.15);
-          box-shadow: 0px 4px 8px rgba(62, 39, 83, 0.15);
+  background: linear-gradient(to right, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
+  box-shadow: 0px 4px 8px hsla(271deg, 36%, 24%, 0.15);
 }
 
 .cp-header__profile-picture {
-  -webkit-box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.15);
-          box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.15);
+  box-shadow: 0px 2px 4px hsla(271deg, 36%, 24%, 0.15);
 }
 
 .cp-header__title b {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
 }
-
 .cp-header__title p {
-  color: #d89eff;
+  color: hsl(276deg, 100%, 81%);
 }
 
 .chat-bubble__receiver-text {
-  color: #9241c8;
-  background-color: #eee6f4;
-  -webkit-box-shadow: 0px 4px 8px rgba(238, 230, 244, 0.15);
-          box-shadow: 0px 4px 8px rgba(238, 230, 244, 0.15);
+  color: hsl(276deg, 55%, 52%);
+  background-color: hsl(272deg, 41%, 93%);
+  box-shadow: 0px 4px 8px hsla(272deg, 41%, 93%, 0.15);
 }
 
 .chat-bubble__sender-text {
-  color: #2e2338;
-  background-color: white;
-  -webkit-box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
-          box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
+  color: hsl(271deg, 23%, 18%);
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 2px 4px hsla(271deg, 36%, 24%, 0.05);
 }
 
 .chat-bubble__receiver-offers {
-  color: white;
-  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
-  background: linear-gradient(to right, #e942ff, #8838ff);
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
 }
-
-.chat-bubble__receiver-offers input[type='radio']:after {
-  background-color: #e942ff;
-  border: 1px solid #e570ff;
-  -webkit-transition: background-color 200ms;
+.chat-bubble__receiver-offers input[type=radio]:after {
+  background-color: hsl(293deg, 100%, 63%);
+  border: 1px solid hsl(289deg, 100%, 72%);
   transition: background-color 200ms;
 }
-
-.chat-bubble__receiver-offers input[type='radio']:checked:after {
-  background-color: #f9f9f9;
-  border: 1px solid #e570ff;
+.chat-bubble__receiver-offers input[type=radio]:checked:after {
+  background-color: hsl(0deg, 0%, 97.5%);
+  border: 1px solid hsl(289deg, 100%, 72%);
 }
 
 .message-box {
-  background-color: white;
-  background-color: white;
-  -webkit-box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
-          box-shadow: 0px 2px 4px rgba(62, 39, 83, 0.05);
+  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 2px 4px hsla(271deg, 36%, 24%, 0.05);
 }
-
-.message-box textarea::-webkit-input-placeholder {
-  color: #c6cacd;
+.message-box textarea::-moz-placeholder {
+  color: hsl(206deg, 6%, 79%);
 }
-
 .message-box textarea:-ms-input-placeholder {
-  color: #c6cacd;
+  color: hsl(206deg, 6%, 79%);
 }
-
-.message-box textarea::-ms-input-placeholder {
-  color: #c6cacd;
-}
-
 .message-box textarea::placeholder {
-  color: #c6cacd;
+  color: hsl(206deg, 6%, 79%);
 }
 
 .message-box__send-btn {
-  background-color: #3e2753;
-  -webkit-transition: background-color 200ms;
+  background-color: hsl(271deg, 36%, 24%);
   transition: background-color 200ms;
 }
-
 .message-box__send-btn:hover {
-  background-color: #9241c8;
+  background-color: hsl(276deg, 55%, 52%);
 }
-
 .message-box__send-btn:active {
-  background-color: #3e2753;
+  background-color: hsl(271deg, 36%, 24%);
 }
 
 .description b {
-  color: #3e2753;
+  color: hsl(271deg, 36%, 24%);
 }
-
 .description p {
-  color: #a39daa;
-}
-/*# sourceMappingURL=colors.css.map */
+  color: hsl(270deg, 7%, 64%);
+}/*# sourceMappingURL=colors.css.map */

@@ -6,25 +6,15 @@
 }
 
 .cp-header__ellipsis {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
   margin-left: auto;
   cursor: pointer;
   width: 9px;
   height: 8px;
 }
-
 .cp-header__ellipsis span {
   border: none;
   width: 2px;
@@ -32,15 +22,14 @@
   background-color: white;
 }
 
-.chat-bubble__receiver-offers input[type='radio'] {
+.chat-bubble__receiver-offers input[type=radio] {
   width: 12px;
   height: 12px;
   margin: 0 8px 0 0;
   border-radius: 100%;
   cursor: pointer;
 }
-
-.chat-bubble__receiver-offers input[type='radio']:after {
+.chat-bubble__receiver-offers input[type=radio]:after {
   display: inline-block;
   position: relative;
   top: -1px;
@@ -48,11 +37,10 @@
   width: 12px;
   height: 12px;
   visibility: visible;
-  content: '';
+  content: "";
   border-radius: 100%;
 }
-
-.chat-bubble__receiver-offers input[type='radio']:checked:after {
+.chat-bubble__receiver-offers input[type=radio]:checked:after {
   display: inline-block;
   position: relative;
   top: -1px;
@@ -60,20 +48,14 @@
   width: 12px;
   height: 12px;
   visibility: visible;
-  content: '';
+  content: "";
   border-radius: 100%;
 }
 
 .message-box__send-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -81,8 +63,6 @@
   cursor: pointer;
   outline: none;
 }
-
 .message-box__send-btn svg {
   margin-left: 2px;
-}
-/*# sourceMappingURL=buttons.css.map */
+}/*# sourceMappingURL=buttons.css.map */
